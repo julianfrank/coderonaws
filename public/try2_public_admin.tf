@@ -2,7 +2,7 @@
 resource "aws_security_group" "sg_coder_on_aws_public_admin" {
   name        = "sg_coder_on_aws_public_admin"
   description = "Security Group for public Admin Server"
-  vpc_id      = "${data.aws_vpc.coder_on_aws_vpc.id}"
+  vpc_id      = "${data.aws_vpc.vpc_coder_on_aws.id}"
   tags        = {    Name = "sg_coder_on_aws_public_admin"  }
   egress{
     description       = "All egress traffic"

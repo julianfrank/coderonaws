@@ -1,6 +1,6 @@
 //Private Subnet
 resource "aws_route_table" "rt_coder_on_aws_private" {
-  vpc_id  = "${data.aws_vpc.coder_on_aws_vpc.id}"
+  vpc_id  = "${data.aws_vpc.vpc_coder_on_aws.id}"
   tags    = {Name = "rt_coder_on_aws_private"}
   route {
     cidr_block = "0.0.0.0/0"

@@ -1,7 +1,7 @@
 resource "aws_security_group" "sg_coder_on_aws_public_nat" {
   name        = "sg_coder_on_aws_public_nat"
   description = "Security Group for public NAT Server"
-  vpc_id      = "${data.aws_vpc.coder_on_aws_vpc.id}"
+  vpc_id      = "${data.aws_vpc.vpc_coder_on_aws.id}"
   tags        = {    Name = "sg_coder_on_aws_public_nat"  }
   egress{
     description       = "All egress traffic"
