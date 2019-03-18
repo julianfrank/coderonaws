@@ -1,0 +1,14 @@
+[Unit]
+Description=Coder as a service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ec2-user
+ExecStart=/usr/bin/bash /home/ec2-user/runcoder.sh
+ExecStop=/usr/bin/bas /home/ec2-user/stopcoder.sh
+
+[Install]
+WantedBy=multi-user.target

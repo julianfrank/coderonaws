@@ -7,3 +7,8 @@
 
 # .tfvars files
 *.tfvars
+
+*.exe
+*.dmg
+*.
+*.pem
