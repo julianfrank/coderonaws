@@ -74,6 +74,9 @@ resource "aws_instance" "i_public_nat" {
         private_key             = "${file("${var.private_key_pem_file}")}"
       }
     }
+    provisioner "local-exec" {
+      command = "echo {nat_ssh: ssh -i \"${aws_instance.i_public_nat.key_name}.pem\" ec2-user@${aws_instance.i_public_nat.private_dns}} >> public.log"
+    }
 }
 
 

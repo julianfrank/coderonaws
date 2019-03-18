@@ -62,6 +62,9 @@ resource "aws_instance" "i_private" {
         private_key   = "${file("${var.private_key_pem_file}")}"
       }
     }
+    provisioner "local-exec" {
+      command = "echo {public_ssh: ssh -i \"${aws_instance.i_private.key_name}.pem\" ec2-user@${aws_instance.i_private.private_ip}} >> private.log"
+    }
 }
 output "coder_on_aws_private" {
   value = "ssh -i \"${aws_instance.i_private.key_name}.pem\" ec2-user@${aws_instance.i_private.private_ip}"
