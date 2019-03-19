@@ -1,0 +1,8 @@
+# Amazon AWS Access Key
+aws_access_key = ""
+# Amazon AWS Secret Key
+aws_secret_key = ""
+#IPV4 CIDR
+cidr_ipv4 = "172.16.0.0/16"
+public_subnet="172.16.0.0/24"
+private_subnet="172.16.1.0/24"
