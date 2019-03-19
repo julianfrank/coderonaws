@@ -127,7 +127,7 @@ resource "aws_instance" "i_public_admin" {
       }
     }
     provisioner "local-exec" {
-      command = "echo {public_ssh: ssh -i \"${aws_instance.i_public_admin.key_name}.pem\" ec2-user@${aws_instance.i_public_admin.public_dns} >> public.log"
+      command = "echo {public_ssh: ssh -i \"${aws_instance.i_public_admin.key_name}.pem\" ec2-user@${aws_instance.i_public_admin.public_dns}} >> public.log"
     }
     provisioner "local-exec" {
       command = "echo {coder_url: http://${aws_instance.i_public_admin.public_dns}} >> public.log"
