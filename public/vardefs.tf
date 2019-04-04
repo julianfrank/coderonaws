@@ -51,11 +51,11 @@ variable "teleport_file" {
 }
 variable "coder_url" {
   description = "Coder Download Path"
-  default = "https://github.com/codercom/code-server/releases/download/1.32.0-282/"
+  default = "https://github.com/codercom/code-server/releases/download/1.408-vsc1.32.0/"
 }
 variable "coder_filename" {
   description = "Coder File NAme"
-  default = "code-server-1.32.0-282-linux-x64"
+  default = "code-server1.408-vsc1.32.0-linux-x64.tar.gz"
 }
 variable "prefix" {
   description = "Prefix to be used in all resources for this project"
